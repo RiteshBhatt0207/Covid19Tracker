@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		MainPage
+	</title>
+	<link rel="stylesheet" href="styling.css">
+	<script>
+		function logOut() {
+			var ans = window.confirm("are you sure  to log out?");
+			if (ans) {
+
+				window.open("newlogin.html");
+
+			}
+
+		}
+	</script>
+</head>
+
+<body>
+	<a href="Information.html" target="show"> <img src="images/registration.jpg" width=70 height=60 alt=Addnewcase></a>
+	&nbsp; &nbsp;
+	<a href="showAllData.html" target="show"> <img src="images/showall.jpg" width=60 height=60 alt=Showalldata> </a>
+	&nbsp; &nbsp;
+	<a href="updateData.html" target="show"><img src="images/update.jpg" width=70 height=60 alt=updatedata></a>
+	<img src=".\\images\\logout.png" valign="top" align="right" width="50px" height="40px" onclick="logOut()">
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+
+        .heading {
+            font-size: 22px;
+        }
+
+        .heading1 {
+            font-size: 20px;
+            color:black
+        }
+
+        .headinglabel {
+            font-size: 19px;
+        }
+
+        td {
+            color: black;
+        }
+
+        .bton {
+            background-color: grey;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+
+            float:center;
+        }
+        .bton1 {
+            background-color: grey;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+
+           
+        }
+
+        .bton:hover {
+            background-color: #4CAF50;
+            /* Green */
+            color: white;
+        }
+        .bton1:hover {
+            background-color: #4CAF50;
+            /* Green */
+            color: white;
+        }
+
+        fieldset {
+            border-color: green;
+        }
+
+        .topright {
+            position: absolute;
+            margin-left: 1170px;
+            margin-top: 1.5px;
+            font-size: 15px;
+            color: red;
+        }
+        #updateForm {
+            position: fixed;
+            display: none;
+            width: 100%;
+            height: 65%;
+            top: 80;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(175, 170, 170, 0.5);
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        .divUpdate {
+            display: none
+        }
+        body{
+            background-color:silver}
+            .inputtxt {
+                width: 85%;
+                padding: 10px 10px;
+                margin: 8px 0;
+                border: 2px solid rgb(87, 84, 84);
+                border-radius: 2px;
+              }
+             .inputtxt1{
+                width: 85%;
+                padding: 10px 10px;
+                margin: 8px 0;
+                border: 2px solid rgb(87, 84, 84);
+                border-radius: 2px;
+             }
+             .inputtxt2{
+                width: 13%;
+                padding: 10px 10px;
+                margin: 8px 0;
+                border: 2px solid rgb(87, 84, 84);
+                border-radius: 2px;
+             }
+             #tablestyle {
+                font-family: Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+              }
+              
+              #tablestyle td, #tablestyle th {
+                border: 1px solid #ddd;
+                padding: 8px;
+              }
+              
+              #tablestyle tr:nth-child(even){background-color: #f2f2f2;}
+              
+              #tablestyle tr:hover {background-color: #ddd;}
+              
+              #tablestyle th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #4CAF50;
+                color: white;
+              }
+              .filterdata{
+                width: 10%;
+                padding: 10px 10px;
+                margin: 8px 0;
+                border: 2px solid rgb(87, 84, 84);
+                border-radius: 2px;
+                font-size: large;
+           
+                position: absolute;
+                top: 1px;
+                right: 10px;
+              
+              
+             }
+            .filter{
+               font-size:x-large;
+              margin-left:83%; 
+            }

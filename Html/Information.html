@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		Sign Up
+	</title>
+	<link rel="stylesheet" href="styling.css">
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="httpRequests.js"></script>
+	<script src="newcase.js"></script>
+
+
+
+
+</head>
+
+<body>
+	<center>
+		<h1> Covid-19 New Case </h1>
+	</center>
+	<div class="topright">
+		<label id="labelrequired"></label>
+	</div>
+
+	<form action="#" method="get" id="form1">
+		<fieldset span style="border-color:white"></span>
+			<fieldset>
+				<legend class="heading"><b> Reporter Details </b></legend>
+				<table border=0>
+					<tr>
+						<td class="heading1"><b> Name* :</b> </td>
+						<td><input type="text" name="txtName" id="txtName" class="inputtxt" size=25 autofocus="on"
+								placeholder="Enter Name" required> </td>
+						<td class="heading1"><b> Age* :</b></td>
+						<td> <input type="text" name="txtAge" id="txtAge" size=4 class="inputtxt" placeholder="Age"
+								required></td>
+						<td class="heading1"> <b>Date Of Birth*:</b></td>
+						<td> <input type="date" name="dateDob" id="dateDob" class="inputtxt1" placeholder="DOB"
+								required>
+						</td>
+
+						<td class="heading1"> <b>Marital status*:</b> </td>
+						<td class="headinglabel">
+							<div id="radioDiv"><input type="radio" name="radioMarSta" id="radioMarSta" value="married">
+								Married
+								<input type="radio" name="radioMarSta" value="unmarried" id="radioMarSta"> Unmarried
+						</td>
+						</div>
+
+					</tr>
+					<tr>
+
+						<td class="heading1"> <b> Address* :</b> </td>
+						<div id="txtAreaAdddiv">
+							<td> <textarea rows=5, cols=20 id="txtareaadd" class="inputtxt1"></textarea></td>
+						</div>
+						<td class="heading1"><b>State* :</b></td>
+						<td>
+							<div id="selectDiv">
+								<select id="select" class="inputtxt1">
+									<option value="Andhra Pradesh">Andhra Pradesh</option>
+									<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+									<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+									<option value="Assam">Assam</option>
+									<option value="Bihar">Bihar</option>
+									<option value="Chandigarh">Chandigarh</option>
+									<option value="Chhattisgarh">Chhattisgarh</option>
+									<option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+									<option value="Daman and Diu">Daman and Diu</option>
+									<option value="Delhi">Delhi</option>
+									<option value="Lakshadweep">Lakshadweep</option>
+									<option value="Puducherry">Puducherry</option>
+									<option value="Goa">Goa</option>
+									<option value="Gujarat">Gujarat</option>
+									<option value="Haryana">Haryana</option>
+									<option value="Himachal Pradesh">Himachal Pradesh</option>
+									<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+									<option value="Jharkhand">Jharkhand</option>
+									<option value="Karnataka">Karnataka</option>
+									<option value="Kerala">Kerala</option>
+									<option value="Madhya Pradesh">Madhya Pradesh</option>
+									<option value="Maharashtra">Maharashtra</option>
+									<option value="Manipur">Manipur</option>
+									<option value="Meghalaya">Meghalaya</option>
+									<option value="Mizoram">Mizoram</option>
+									<option value="Nagaland">Nagaland</option>
+									<option value="Odisha">Odisha</option>
+									<option value="Punjab">Punjab</option>
+									<option value="Rajasthan">Rajasthan</option>
+									<option value="Sikkim">Sikkim</option>
+									<option value="Tamil Nadu">Tamil Nadu</option>
+									<option value="Telangana">Telangana</option>
+									<option value="Tripura">Tripura</option>
+									<option value="Uttar Pradesh">Uttar Pradesh</option>
+									<option value="Uttarakhand">Uttarakhand</option>
+									<option value="West Bengal">West Bengal</option>
+								</select>
+							</div>
+						</td>
+						<td class="heading1"><b>Pin code* :</b> </td>
+						<td><input type="text" name="txtpincode" size=6 placeholder="dddd" class="inputtxt"
+								id="txtpincode" required>
+						</td>
+
+						<td class="heading1"> <b>Sex*:</b></td>
+
+						<td class="headinglabel">
+							<div id="sexDiv">
+								<input type="radio" name="radioSex" value="male" id="radioSex1">Male
+								<input type="radio" name="radioSex" id="radioSex2" value="female">Female
+								<input type="radio" name="radioSex" value="other" id="radioSex3"> Other
+							</div>
+						</td>
+
+					</tr>
+					<tr>
+						<td class="heading1"><b>Occupation* : </b></td>
+						<td>
+							<div id="occupationDiv">
+								<select id="occupationSelect" class="inputtxt1">
+									<option> Student </option>
+									<option> Govt. Sector </option>
+									<option> Private Sector </option>
+									<option> Unemployement </option>
+								</select>
+							</div>
+						</td>
+						<td class="heading1"><b>Primary Mobile No.*:</b> </td>
+						<td><input type="text" name="mobileno" size=15 placeholder="Mob. no." class="inputtxt"
+								id="mobileno"></td>
+						<td class="heading1"><b>Secondary Mobile No.*:</b></td>
+						<td> <input type="text" name="othermobileno" size=15 class="inputtxt"
+								placeholder="otherMobileno" id="othermobileno"></td>
+						<td class="heading1"><b>E-mail*:</b></td>
+						<td> <input type="email" name="email" class="inputtxt1" placeholder="abc@gmail.com" id="email">
+						</td>
+
+					</tr>
+				</table>
+			</fieldset> <br>
+			<fieldset>
+				<legend class="heading"> <b>Medical Details</b> </legend>
+				<table border=0>
+					<tr>
+						<td class="heading1"> <b>Sickness Reported date</b> </td>
+						<td>
+
+							<input type="date" name="sickDate" id="sickDate" class="inputtxt1" placeholder="type date">
+
+						</td>
+						<td class="heading1"> <b>Not Reporting from</b> </td>
+						<td>
+
+							<input type="date" name="notReoprtingDate" class="inputtxt1" id="notReoprtingDate">
+
+						</td>
+					</tr>
+					<tr>
+						<td class="heading1"> <b>Case Type*</b> </td>
+						<td class="headinglabel">
+							<div id="radioCaseDiv">
+								<input type="radio" name="radioCaseType" id="radioCaseType" value="Covid-Positive">
+								Covid-Positive
+								<input type="radio" name="radioCaseType" id="radioCaseType" value="Covid-suspect">
+								Covid-suspect
+								<input type="radio" name="radioCaseType" id="radioCaseType" value=" Other"> Other
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="heading1"> <b>Primary Symptoms* </b></td>
+					</tr>
+					<tr>
+
+						<table border=0>
+							<td class="headinglabel">
+								<div id="psymDiv">
+									<input type="checkbox" name="symptoms" id="symptoms"
+										value="Asymptomatic">Asymptomatic &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<input type="checkbox" name="symptoms" id="symptoms" value="High temperature">High
+									temperature<br>
+									<input type="checkbox" name="symptoms" id="symptoms" value="Low sp02 level">Low sp02
+									level &nbsp;&nbsp;&nbsp;&nbsp;
+									<input type="checkbox" name="symptoms" id="symptoms" value="Dry Cough">Dry Cough<br>
+									<input type="checkbox" name="symptoms" id="symptoms" value="Tiredness">Tiredness
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+									<input type="checkbox" name="symptoms" id="symptoms" value="pain">Pain<br>
+									<input type="checkbox" name="symptoms" id="symptoms" value="Sore throat">Sore throat
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<input type="checkbox" name="symptoms" id="symptoms" value="Headache">Headache<br>
+								</div>
+							</td>
+						</table>
+					</tr>
+
+				</table>
+				<br>
+				<fieldset>
+					<legend class="heading"> <b> Other Symptoms </b></legend>
+					<table border=0>
+						<tr>
+							<td>
+
+								<input type="text" name="otherSymptom" class="inputtxt" placeholder="Another Symptoms"
+									id="otherSymptom">
+
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+				<br>
+				<table border=0>
+					<tr>
+						<td class="heading1"><b> Condition of the Employee*</b></td>
+						<td class="headinglabel">
+							<div id="conditionDiv">
+								<input type="radio" name="condition1" id="condition1" value="Severely critical">Severely
+								critical
+								<input type="radio" name="condition1" id="condition1" value="Critical">Critical
+								<input type="radio" name="condition1" id="condition1"
+									value="Moderately Unwell">Moderately Unwell
+								<input type="radio" name="condition1" id="condition1" value="No Health issues"> No
+								Health issues
+							</div>
+						</td>
+					</tr>
+				</table>
+
+			</fieldset><br>
+			<fieldset>
+				<legend class="heading"> <b>Action Details </b></legend>
+				<table border=0>
+					<tr>
+						<b class="heading1"> Action Taken </b>
+						<td class="headinglabel"><input type="checkbox" name="action" id="action1"
+								value="Sent Back Home">Sent Back Home<br>
+							<input type="checkbox" name="action" id="action2" value="Asked to stay back home">Asked to
+							stay back home
+						</td>
+						<td class="headinglabel"> <input type="checkbox" name="action" id="action3"
+								value="Taken back to home">Taken back to home<br>
+							<input type="checkbox" name="action" id="action4"
+								value="Admitted to quarntine center">Admitted to quarntine center
+						</td>
+						<td class="headinglabel"> <input type="checkbox" name="action" id="action5"
+								value="Covid test conducted">Covid test conducted<br>
+							<input type="checkbox" name="action" id="action6" value="Covid kit provided">Covid kit
+							provided
+						</td>
+					</tr>
+				</table><br>
+				<fieldset>
+					<legend class="heading"> <b>Additional Action</b></legend>
+					<table border=0>
+						<tr>
+							<td> <input type="text" name="additionalAction" class="inputtxt"
+									placeholder="Additional action" id="additionalAction"></td>
+						</tr>
+					</table>
+				</fieldset><br>
+				<fieldset>
+					<legend class="heading"><b> Quarantine period(days)</b></legend>
+					<table border=0>
+						<tr>
+							<td> <input type="day" name="qpDays" class="inputtxt" placeholder="Days" id="qpDays"></td>
+						</tr>
+					</table>
+
+
+				</fieldset>
+				<fieldset>
+					<legend class="heading"><b>Expexted date of resuming back duty</b></legend>
+					<table border=0>
+						<tr>
+							<td> <input type="date" name="expextedDate" class="inputtxt1" placeholder="Expexted Date"
+									id="expextedDate" required></td>
+						</tr>
+					</table>
+				</fieldset>
+			</fieldset> <br>
+
+			<input class="bton" type="button" value="Add New case" onClick="addNewCase()">
+
+		</fieldset>
+	</form>
+</body>
+
+</html>

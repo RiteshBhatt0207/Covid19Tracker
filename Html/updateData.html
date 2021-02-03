@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <link rel="stylesheet" href="styling.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="updateData.js"></script>
+    <script src="httpRequests.js"></script>
+
+</head>
+
+<body>
+    <form id='searchForm'>
+        <center>
+            <p1 class=heading> Enter Your Mobile No. here</p1> <input type='text' id='txtMobile' class="inputtxt2"
+                name='text'>
+            <input type="button" class=bton1 value="Search" onClick=getData()><br>
+            <div id="recordDiv">
+
+            </div><br>
+            <div id="updateForm" class="divUpdate">
+                <form>
+                    <h1>Update Form</h1>
+
+                    <table border=0>
+                        <tr>
+                            <td> <label><b class="heading1">Quarantine Period</b></label></td>
+                            <td><input type="text" class="inputtxt1" id="quarprTxt"></td>
+
+                            <td> <label for="text"><b class="heading1">Case Type</b></label></td>
+                            <td> <input type="text" class="inputtxt1" id="casetypeTxt"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="text"><b class="heading1">Symptoms</b></label></td>
+                            <td>
+                                <input type="text" class="inputtxt1" id="sympTxt">
+                            </td>
+                            <td>
+                                <label for="text"><b class="heading1"> Action Details</b></label>
+                            </td>
+                            <td> <input type="text" class="inputtxt1" id="actdetTxt"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="date"><b class="heading1"> Expected Return Date</b></label>
+                            </td>
+                            <td><input type="date" class="inputtxt1" id=returndate></td>
+                            <td> <label for="checkbox"><b class="heading1">Recovered</b></label></td>
+                            <td> <input type="checkbox" class="inputtxt1" id=recovered value="RECOVERED"></td>
+                        </tr>
+                        <tr>
+                            <td> <br> </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+
+                            <td></td>
+                            <td> <button type="submit" class=bton1 onclick="updateData()">Update</button> </td>
+                            <td><button type="button" class=bton1 onclick="closeForm()">Close</button></td>
+
+
+
+                        </tr>
+
+                    </table>
+                </form>
+            </div>
+
+
+
+        </center>
+    </form>
+</body>
+</body>
+
+</html>

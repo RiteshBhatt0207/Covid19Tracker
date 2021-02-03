@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Sign Up
+    </title>
+    <style>
+        body {
+            background-color: grey;
+        }
+
+        .bton {
+            background-color: grey;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+
+
+        }
+
+        .bton:hover {
+            background-color: #4CAF50;
+            /* Green */
+            color: white;
+        }
+
+        .inputtxt2 {
+            width: 80%;
+            padding: 10px 10px;
+            margin: 8px 0;
+            border: 2px solid rgb(87, 84, 84);
+            border-radius: 2px;
+        }
+    </style>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="httpRequests.js"></script>
+    <script src="signin.js"></script>
+    <script src="password.js"></script>
+
+</head>
+
+<body>
+    <center>
+        <div>
+            <label id="labelrequired"></label>
+        </div>
+
+        <table border=0>
+            <tr>
+                <td>
+                    <b>
+                        Enter Name:
+                    </b>
+
+                    <input type="text" name="userName" class="inputtxt2" id="userName" size=25 autofocus="on"
+                        placeholder="Enter Your Name" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>
+                        Enter Mail:
+                    </b>
+
+                    <input type="email" name="useremail" id="userEmail" size=25 class="inputtxt2" autofocus="on"
+                        placeholder="Enter Your Email" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>
+                        Enter Mobile Number:
+                    </b>
+                    <input type="text" name="userMobileNo" id="userMobNo" class="inputtxt2" size=10 autofocus="on"
+                        placeholder="Enter Your Mobile Number" required>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <b>
+                        Enter Password:
+                    </b>
+                    <input type="password" name="password" id="userPassword" class="inputtxt2" size=25 autofocus="on"
+                        placeholder="Enter Your Password" required>
+
+                </td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+                <td>
+                    <b>
+                        Enter Confirm Password:
+                    </b>
+                    <input type="password" name="userNewPassword" id="userNewPassword" class="inputtxt2" size=25
+                        autofocus="on" placeholder="Confirm Your Password" required><br>
+
+                    <input type="checkbox" onclick="showPassword()"> Show Password
+                </td>
+
+            </tr><br>
+
+            <tr>
+                <td><br>
+                    &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="button" id="save" class=bton value="Save" onclick="saveDataSign()">
+                    &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+
+                    <input type="button" id="cancle" class=bton value="Cancel" onclick="closeSignup()" required>
+                </td>
+            </tr>
+
+        </table>
+    </center>
+
+</body>
+
+</html>

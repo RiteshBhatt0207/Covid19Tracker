@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+
+	</title>
+	<link rel="stylesheet" href="styling.css">
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="showData.js"></script>
+	<script src="httpRequests.js"></script>
+</head>
+
+<body onload=showData()>
+
+
+
+	<h1 class="filter">
+		Filter By:</h1>
+	<div id="selectDiv">
+		<select id="filterdata" class="filterdata" onchange="filterData()">
+			<option value="ACTIVE">
+				Active
+			</option>
+			<option value="RECOVERED">
+				Recovered
+			</option>
+		</select>
+
+
+
+
+	</div>
+	<div id="responseTable">
+
+	</div>
+</body>
+
+</html>
